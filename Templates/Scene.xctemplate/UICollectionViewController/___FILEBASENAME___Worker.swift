@@ -9,6 +9,5 @@
 import UIKit
 
 final class ___FILEBASENAMEASIDENTIFIER___Worker {
-    func doSomeWork() {
-    }
+   
 }
