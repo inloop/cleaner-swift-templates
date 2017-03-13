@@ -8,9 +8,6 @@
 
 import UIKit
 
-extension ___FILEBASENAMEASIDENTIFIER___Interactor: ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput { }
-extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___InteractorOutput { }
-
 enum ___FILEBASENAMEASIDENTIFIER___Configurator {
     static func configure(viewController: ___FILEBASENAMEASIDENTIFIER___ViewController) {
         let router = ___FILEBASENAMEASIDENTIFIER___Router()

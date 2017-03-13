@@ -8,41 +8,20 @@
 
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
-    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___.Something.ViewModel)
-}
+protocol ___FILEBASENAMEASIDENTIFIER___Displayable: class {
 
-protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput {
-    func doSomething(request: ___FILEBASENAMEASIDENTIFIER___.Something.Request)
 }
 
 final class ___FILEBASENAMEASIDENTIFIER___ViewController: UITableViewController {
-    var output: ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput!
+    var output: ___FILEBASENAMEASIDENTIFIER___Interactable!
     var router: ___FILEBASENAMEASIDENTIFIER___Router!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         ___FILEBASENAMEASIDENTIFIER___Configurator.configure(viewController: self)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        doSomethingOnLoad()
-    }
-
-    func doSomethingOnLoad() {
-        let request = ___FILEBASENAMEASIDENTIFIER___.Something.Request()
-        output.doSomething(request: request)
-    }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___ViewController: ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
-    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___.Something.ViewModel) {
-    }
-}
+extension ___FILEBASENAMEASIDENTIFIER___ViewController: ___FILEBASENAMEASIDENTIFIER___Displayable {
 
-extension ___FILEBASENAMEASIDENTIFIER___ViewController: ___FILEBASENAMEASIDENTIFIER___PresenterOutput {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        router.passDataToNextScene(segue: segue)
-    }
 }
