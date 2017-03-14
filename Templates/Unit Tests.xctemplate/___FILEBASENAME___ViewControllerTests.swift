@@ -19,7 +19,7 @@ final class ___FILEBASENAMEASIDENTIFIER___ViewControllerTests: XCTestCase {
 
     func setup___FILEBASENAMEASIDENTIFIER___ViewController() {
         let bundle = Bundle.main
-        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        let storyboard = UIStoryboard(name: "___FILEBASENAMEASIDENTIFIER___", bundle: bundle)
         viewController = storyboard.instantiateViewController(withIdentifier: "___FILEBASENAMEASIDENTIFIER___ViewController") as! ___FILEBASENAMEASIDENTIFIER___ViewController
         viewController.loadView()
     }
